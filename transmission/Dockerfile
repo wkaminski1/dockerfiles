@@ -5,7 +5,7 @@
 #	This file describes how to build a transmission container with all
 #	dependencies installed.
 #	Tested on Debian Jessie
-# USAGE:
+# USAGE::
 #	# Download transmission Dockerfile
 #	wget http://raw.githubusercontent.com/jfrazelle/dockerfiles/master/transmission/Dockerfile
 #
@@ -19,7 +19,7 @@
 #
 
 # Base docker image
-FROM alpine:latest
+FROM ubuntu:14.04
 MAINTAINER Jessica Frazelle <jess@docker.com>
 
 RUN apt-get update && apt-get install -y \
