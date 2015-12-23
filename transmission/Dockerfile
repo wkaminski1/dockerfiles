@@ -28,7 +28,6 @@ RUN apt-get update && apt-get install -y \
 	transmission-daemon \
 	transmission-gtk \
 	--no-install-recommends \
-	&& rm -rf /var/cache/apk/* \
 	&& mkdir -p /transmission/{download,watch,incomplete,config} \
 	&& chmod 1777 /transmission
 
