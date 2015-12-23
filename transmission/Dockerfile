@@ -22,8 +22,12 @@
 FROM alpine:latest
 MAINTAINER Jessica Frazelle <jess@docker.com>
 
-RUN apk update && apk add \
+RUN apt-get update && apt-get install -y \
+	transmission-cli \
+	transmission-common \
 	transmission-daemon \
+	transmission-gtk \
+	--no-install-recommends \
 	&& rm -rf /var/cache/apk/* \
 	&& mkdir -p /transmission/{download,watch,incomplete,config} \
 	&& chmod 1777 /transmission
